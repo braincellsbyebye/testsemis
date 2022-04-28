@@ -1,3 +1,9 @@
 from django.db import models
+class fstock(models.Model):
+    Mfd_id = models.IntegerField(primary_key=True)
+    Name = models.CharField(max_length=50)
+    UnitPrice = models.DecimalField(max_digits=5, decimal_places=2)
+    UnitsInStock = models.PositiveSmallIntegerField()
 
-# Create your models here.
+    def __str__(self):
+        return self.Name
